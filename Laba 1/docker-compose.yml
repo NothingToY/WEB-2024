@@ -1,0 +1,25 @@
+# прописываем нужную нам версию
+version: "3.8"
+# прописываем сервисы
+services:
+  # придумываем название сервиса
+  web:
+  # образ докера (собранный обрах nginx)
+    image: nginx:latest
+    # пробрасываем порты для работы веб-сервиса
+    ports:
+      - "8080:80"
+    # монтирование папки 'code' и настройка nginx
+    volumes:
+      - ./code:/code
+      # проброска для докера конфиг файла site.conf
+      - ./site.conf:/etc/nginx/conf.d/site.conf
+    #связываем сервер и php
+    links:
+      - php
+  #связываем репозиторий php с образом nginx
+  php:
+    image: php:8.3-fpm
+    # монтирование папки 'code'
+    volumes:
+      - ./code:/code
