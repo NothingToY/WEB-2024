@@ -176,3 +176,81 @@ echo $myNum;
 
 
 
+echo "\nNum16\n";
+function  increaseEnthusiasm(string $string): string
+{
+    return $string ."! ";
+}
+echo increaseEnthusiasm("Привет");
+
+function repeatThreeTimes(string $string): string
+{
+    $res = "";
+    for ($i=0; $i <3; $i++){
+        $res .= $string;
+
+    }
+    return $res;
+}
+echo "\n";
+echo repeatThreeTimes("мир");
+echo "\n";
+echo repeatThreeTimes(increaseEnthusiasm("кто здесь ?"));
+
+function cut(string $string, int $num=1): string
+{
+    if (strlen($string) <= $num) {
+        return $string;
+    } else {
+        $cutString = '';
+        for ($i = 0; $i < $num; $i++) {
+            $cutString .= $string[$i];
+        }
+        return $cutString;
+    }
+
+}
+echo cut("я лично нахожусь тут, а ты ?", 10);
+echo "\n";
+
+$randomlist = array();
+for ($i = 0; $i < 10; $i++) {
+    $randomlist[] = rand();
+}
+echo "Случайный массив:( ";
+foreach ($randomlist as $value) {
+    echo $value . " ";
+}
+echo ")";
+echo "\n";
+function printTheArray(array $array, int $len, int $i = 0): void
+{
+    if ($i == $len) {
+        echo "\n";
+        return;
+    }
+    echo $array[$i] . " ";
+    $i++;
+    printTheArray($array, $len, $i);
+}
+printTheArray($randomlist, count($randomlist));
+function digitsCounter(int $num): int
+{
+    if ($num < 0) {
+        $num = abs($num);
+    }
+    if ($num < 10) {
+        return $num;
+    }
+    $stringNum = $num. '';
+    $sum = intval($stringNum[0]);
+    for ($i = 1; $i < strlen($stringNum); $i++) {
+        $sum += intval($stringNum[$i]);
+    }
+    return digitsCounter($sum);
+}
+echo digitsCounter(1344);
+
+
+
+
