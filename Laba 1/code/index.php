@@ -450,3 +450,65 @@ for ($i=1; $i<21;$i++){
     echo $piram;
     echo "\n";
 }
+
+
+
+
+
+echo "\nNum20\n";
+$arr = array();
+$num = rand(1,5);
+for ($i = 0; $i < $num; $i++){
+    $arr[]=rand(1,100);
+}
+foreach ($arr as $sh){
+    echo $sh .' ';
+}
+echo "\n";
+$arithmetica = array_sum($arr) / count($arr);
+echo $arithmetica;
+echo "\n";
+
+function sto(int $first_nym, int $last): int
+{
+    return (($first_nym+$last)/2)*$last;
+
+}
+echo "Сумма чисел от 1 до 100 " .sto(1,100);
+echo "\n";
+
+$arrr = array();
+$num = rand(1,5);
+for ($i = 0; $i < $num; $i++){
+    $arrr[]=rand(1,100);
+}
+foreach ($arr as $sh) {
+    echo $sh . ' ';
+}
+$sqrtArray = array_map('sqrt', $arr);
+echo "- квадратные корни чисел соответственно будут равны: ";
+foreach ($sqrtArray as $sh) {
+    echo "\n";
+    echo $sh . ' ';
+}
+echo "\n";
+
+$alf = range("a", "z");
+$val = range(1, 26);
+$asd = array_combine($alf,$val);
+foreach ($asd as $alf=> $val){
+    echo "key: $alf; value: $val";
+    echo "\n";
+}
+
+
+function Lfunc(string $num, $i = 0, $summ = 0): int
+{
+    $summ += intval(substr($num, 0, 2));
+    if (strlen($num) == 0) {
+        return $summ;
+    } else {
+        return Lfunc(substr($num, 2), 2, $summ);
+    }
+}
+echo "сумма пар цифр 1 и 2,3 и 4,5 и 6,7 и 8,9 и 0 строки 1234567890 равна " .Lfunc('1234567890');
