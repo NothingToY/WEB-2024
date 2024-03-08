@@ -252,5 +252,94 @@ function digitsCounter(int $num): int
 echo digitsCounter(1344);
 
 
+echo "\nNum17\n";
+function string_of_x(array &$array, int $number_of_x): void
+{
+    for ($i = 0; $i <= $number_of_x; $i++){
+        $array[] = str_repeat('x', $i);
+    }
+}
+$xx = array();
+string_of_x($xx, 5);
+foreach ($xx as $value){
+    echo $value ." ";
+}
+echo "\n";
+
+function str_x($value, int $count): array
+{
+    $array = array();
+    for ($i=0; $i <$count; $i++){
+        $array[] = $value;
+    }
+    return $array;
+}
+$xxx = str_x('x', 5);
+foreach ($xxx as $sh){
+    echo $sh;
+}
+echo "\n";
+$_2DArray = array(
+    array(1, 2, 3),
+    array(4, 5),
+    array(6)
+);
+
+function sumof2DArray(array $_2DArray): int
+{
+    $sum = 0;
+    foreach ($_2DArray as $array) {
+        foreach ($array as $item) {
+            $sum += $item;
+        }
+    }
+    return $sum;
+}
+echo sumof2DArray($_2DArray);
+echo "\n";
+$count = 1;
+$arrayth = array();
+for ($i = 0; $i < 3; $i++) {
+    $arrayth[] = array();
+    for ($j = &$count; $j < 10; $j++) {
+        $arrayth[$i][] = $j;
+    }
+}
+foreach ($arrayth as $array) {
+    foreach ($array as $sh) {
+        echo $sh . ',';
+
+    }
+}
+echo "\n";
+
+$wp = array(2,5,3,9);
+$wp_12 = $wp[0] * $wp[1];
+$wp_34 = $wp[2] * $wp[3];
+$result = $wp_12 + $wp_34;
+echo $result;
+echo "\n";
+
+$user = array("name" => "Andrew", "surname" => "Kruglyak", "patronymic" => "Olegovich");
+echo $user["surname"] .' ' .$user["name"] .' ' .$user["patronymic"];
+echo "\n";
+
+$date = array("year"=> "2024", "month" =>"March", "day"=>"9");
+echo $date["year"] ."-" .$date["month"] ."-" .$date["day"];
+echo "\n";
+
+$arr = array('a','b','c','d','e');
+$counter = 0;
+foreach ($arr as $sh){
+    $counter++;
+}
+echo "Кол-во элементов в массиве: " .$counter;
+echo "\n";
+echo "Последний элемент в массиве: " .$arr[$counter-1];
+echo "\n";
+echo "Предпоследний элемент в массиве: " .$arr[$counter-2];
+echo "\n";
+
+
 
 
