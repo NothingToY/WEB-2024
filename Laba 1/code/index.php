@@ -442,3 +442,11 @@ if ($i == 3) {
 
 
 
+
+echo "\nNum19\n";
+$piram = "";
+for ($i=1; $i<21;$i++){
+    $piram .="x";
+    echo $piram;
+    echo "\n";
+}
