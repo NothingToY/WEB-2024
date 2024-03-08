@@ -164,5 +164,15 @@ echo $i .' - столько первых элементов массива a_1 �
 echo "\n";
 
 
+function printStringReturnNumber(): int
+{
+    echo "Возврат числового значения";
+    return 27;
+}
+$myNum = printStringReturnNumber();
+echo "\n";
+echo $myNum;
+
+
 
 
