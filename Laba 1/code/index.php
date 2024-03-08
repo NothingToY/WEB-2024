@@ -57,5 +57,19 @@ $answer /= 2;
 $answer -= $my_num;
 echo $answer;
 
+echo "\nNum 14\n";
+$a = 10;
+$b = 3;
+echo $a % $b;
+echo "\n";
+echo "Делится ли $a на $b без остатка? ";
+if ($a % $b == 0) {
+    echo "Делится, " . $a / $b;
+} else {
+    echo "Делится с остатком, остаток от деления $a на $b будет равен " . $a % $b;
+}
+echo "\n";
+
+
 
 
