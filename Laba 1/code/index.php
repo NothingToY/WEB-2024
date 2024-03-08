@@ -136,5 +136,33 @@ for ($i = 0; $i < count($mass); $i++){
 }
 
 
+echo "\n";
+$r = rand();
+$del = array();
+for ($i = 1; $i <= ceil(sqrt($r)); $i++) {
+    if ($r % $i == 0) {
+        $del[] = $i;
+        $del[] = $r / $i;
+    }
+}
+echo "Делители числа $r - ";
+foreach ($del as $value) {
+    echo $value . ", ";
+}
+echo "\n";
+
+
+
+$a_1 = array(1,2,3,4,5,6,7,8,9,10);
+$indx = $a_1[0];
+$i = 1;
+while ($indx <= 10) {
+    $indx += $a_1[$i];
+    $i++;
+}
+echo $i .' - столько первых элементов массива a_1 нужно сложить, чтобы суммма была больше 10';
+echo "\n";
+
+
 
 
