@@ -138,7 +138,7 @@ for ($i = 0; $i < count($mass); $i++){
 
 echo "\n";
 $r = rand();
-$del = array();
+$del = [];
 for ($i = 1; $i <= ceil(sqrt($r)); $i++) {
     if ($r % $i == 0) {
         $del[] = $i;
@@ -213,7 +213,7 @@ function cut(string $string, int $num=1): string
 echo cut("я лично нахожусь тут, а ты ?", 10);
 echo "\n";
 
-$randomlist = array();
+$randomlist = [];
 for ($i = 0; $i < 10; $i++) {
     $randomlist[] = rand();
 }
@@ -259,7 +259,7 @@ function string_of_x(array &$array, int $number_of_x): void
         $array[] = str_repeat('x', $i);
     }
 }
-$xx = array();
+$xx = [];
 string_of_x($xx, 5);
 foreach ($xx as $value){
     echo $value ." ";
@@ -268,7 +268,7 @@ echo "\n";
 
 function str_x($value, int $count): array
 {
-    $array = array();
+    $array = [];
     for ($i=0; $i <$count; $i++){
         $array[] = $value;
     }
@@ -298,9 +298,9 @@ function sumof2DArray(array $_2DArray): int
 echo sumof2DArray($_2DArray);
 echo "\n";
 $count = 1;
-$arrayth = array();
+$arrayth = [];
 for ($i = 0; $i < 3; $i++) {
-    $arrayth[] = array();
+    $arrayth[] = [];
     for ($j = &$count; $j < 10; $j++) {
         $arrayth[$i][] = $j;
     }
@@ -415,7 +415,7 @@ else{
 }
 echo "\n";
 
-$arr = array();
+$arr = [];
 $numm = rand(1, 5);
 
 for ($i = 0; $i < $numm; $i++) {
@@ -456,7 +456,7 @@ for ($i=1; $i<21;$i++){
 
 
 echo "\nNum20\n";
-$arr = array();
+$arr = [];
 $num = rand(1,5);
 for ($i = 0; $i < $num; $i++){
     $arr[]=rand(1,100);
@@ -477,7 +477,7 @@ function sto(int $first_nym, int $last): int
 echo "Сумма чисел от 1 до 100 " .sto(1,100);
 echo "\n";
 
-$arrr = array();
+$arrr = [];
 $num = rand(1,5);
 for ($i = 0; $i < $num; $i++){
     $arrr[]=rand(1,100);
