@@ -7,4 +7,3 @@ $result1 = preg_match_all($pattern1, $str1, $matches);
 echo "Строчки, соответствующие шаблону:\n";
 print_r($matches[0]);
 echo "\n";
-
