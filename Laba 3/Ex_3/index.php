@@ -32,7 +32,7 @@
         </label><br>
         <button type="submit">Confirm</button>
     </form>
-    <div id="table" style="text-align: center">
+    <div id="table">
         <table>
             <thead>
             <tr>
