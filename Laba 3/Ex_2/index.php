@@ -1,18 +1,9 @@
 <?php
 session_start();
-if ("POST"==$_SERVER["REQUEST_METHOD"])
-{
-    $surname = $_POST["surname"];
 if ($_SERVER["REQUEST_METHOD"]=="POST"){
     $name = $_POST["name"];
     $surname = $_POST["surname"];
     $age = $_POST["age"];
-
-    $_SESSION["surname"] = $surname;
-    $_SESSION["name"] = $name;
-    $_SESSION["age"] = $age;
-
-
 
     $salary = $_POST["salary"];
     $nationality = $_POST["nationality"];
@@ -36,13 +27,17 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
     </title>
 </head>
 <body>
-    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-        <label for="surname">Фамилия:</label>
-        <input type="text" id="surname" name="surname" required><br>
+    <form method="post">
         <label for="name">Имя:</label>
-        <input type="text" id="name" name="name" required><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="surname">Фамилия:</label>
+        <input type="text" id="surname" name="surname"><br>
         <label for="age">Возраст:</label>
-        <input type="text" id="age" name="age" required><br>
+        <input type="text" id="age" name="age"><br>
+        <label for="salary">Зарплата:</label>
+        <input type="text" id="salary" name="salary"><br>
+        <label for="nationality">Национальность:</label>
+        <input type="text" id="nationality" name="nationality"><br>
         <input type="submit" value="Отправить данные">
     </form>
 </body>
