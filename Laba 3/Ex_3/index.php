@@ -41,6 +41,7 @@
                 <th>Category</th>
                 <th>Description</th>
 
+
     </div>
     <tbody>
     <?php
